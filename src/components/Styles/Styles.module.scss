@@ -247,11 +247,6 @@ table {
   --color-text-neg: #{$color-text-neg};
   --color-text-themed: #{$color-text};
   --color-bg-themed: #{$color-light-grey};
-
-  --navigation-width: 80%;
-  @include medium {
-    --navigation-width: 50vw;
-  }
 }
 
 // ====================================================================================
