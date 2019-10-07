@@ -1,0 +1,11 @@
+.LoadAnimationPaused {
+  animation-play-state: paused;
+}
+
+.LoadAnimation {
+  animation-play-state: running;
+
+  &.PropogateAnimation * {
+    animation-play-state: running;
+  }
+}

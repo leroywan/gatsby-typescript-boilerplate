@@ -1,0 +1,168 @@
+// ======================================
+// SPACICNG
+// ======================================
+$spacing: 20px;
+$spacing-tight: 10px;
+$spacing-loose: 30px;
+$spacing-extra-loose: 40px;
+$letter-spacing: 1.5px;
+$line-height: 1.3;
+
+// ======================================
+// BREAKPOINTS
+// ======================================
+$max-screen-width: 1060px;
+$max-content-width: 740px;
+
+$breakpoint-mobile: 320px;
+$breakpoint-small: 540px;
+$breakpoint-medium: 720px;
+$breakpoint-large: $max-screen-width + $spacing * 2;
+$breakpoint-xlarge: 1480px;
+
+// ======================================
+// FONTS
+// ======================================
+$font-family-primary: 'Ehrhardt';
+$font-family-secondary: 'Muli';
+$font-family-body: 'Ehrhardt';
+
+$root-font-size: 10px;
+$root-font-size-small: 11px;
+$root-font-size-medium: 11.5px;
+$root-font-size-large: 12px;
+$root-font-size-xlarge: 13px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$font-size-h1: 3.4rem;
+$font-size-h2: 2.8rem;
+$font-size-h3: 2.2rem;
+$font-size-h4: 2rem;
+$font-size-h5: 1.9rem;
+$font-size-h6: 1.9rem;
+$font-size: 1.9rem;
+$font-size-small: 1.6rem;
+$font-size-subscript: 1.2rem;
+
+// ======================================
+// COLOR Palette | Note: CSS variables of
+// these values are also stored in
+// Styles.module.scss
+// ======================================
+
+// Colors
+$color-primary: #ffe84b;
+$color-secondary: #5bacdb;
+$color-input-bg: #f2f2f2;
+$color-input-outline: rgba(24, 85, 252, 0.1);
+$color-light-grey: #fcfcfc;
+$color-dark-grey: #efefef;
+$color-black: #121212;
+$color-subdued: $color-light-grey;
+$color-bg: $color-light-grey;
+$color-error: rgb(231, 39, 14);
+$color-slate-blue: #709da5;
+
+// Text
+$color-heading: #121212;
+$color-text: #363636;
+$color-heading-neg: #f0f0f0;
+$color-text-neg: #bababa;
+$color-text-subdued: #ababab;
+
+// Button
+$color-btn-primary: $color-black;
+$color-button-primary-text: $color-black;
+$color-button-subdued: $color-subdued;
+
+// Link
+$color-link: rgb(0, 42, 119);
+
+// Transparency
+$translucent: 0.4;
+$semi-opaque: 0.75;
+$opaque: 1;
+
+// ======================================
+// ANIMATION
+// ======================================
+$animation-duration: 300ms;
+$animation-duration-short: 100ms;
+$animation-duration-long: 600ms;
+$animation-duration-xlong: 1000ms;
+
+// ======================================
+// Z INDEX
+// ======================================
+$z-header: 1000;
+$z-background: -100;
+
+// ======================================
+// HEADER
+// ======================================
+$header-height: 50px;
+$navigation-width: 300px;
+// ======================================
+// FOOTER
+// ======================================
+$footer-height: 280px;
+
+// ========================================
+// MIXINS
+// ========================================
+
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: #{$breakpoint-small}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$breakpoint-medium}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$breakpoint-large}) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media (min-width: #{$breakpoint-xlarge}) {
+    @content;
+  }
+}
+
+@mixin max-screen-width {
+  margin-left: $spacing;
+  margin-right: $spacing;
+
+  @include large {
+    max-width: $max-screen-width;
+    margin: 0 auto;
+  }
+}
+
+@mixin box-shadow {
+  box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+// ====================================================================================
+// FUNCTIONS
+// ====================================================================================
+
+@function neg($value) {
+  @return #{0 - $value};
+}

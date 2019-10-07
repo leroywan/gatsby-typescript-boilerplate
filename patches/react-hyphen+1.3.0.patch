@@ -1,0 +1,58 @@
+diff --git a/node_modules/react-hyphen/dist/react-hyphen.cjs.js b/node_modules/react-hyphen/dist/react-hyphen.cjs.js
+index 351feeb..ad90851 100644
+--- a/node_modules/react-hyphen/dist/react-hyphen.cjs.js
++++ b/node_modules/react-hyphen/dist/react-hyphen.cjs.js
+@@ -1,6 +1,8 @@
+ 'use strict';
+ 
+-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
++function _interopDefault(ex) {
++  return ex && typeof ex === 'object' && 'default' in ex ? ex['default'] : ex;
++}
+ 
+ var React = _interopDefault(require('react'));
+ var hyphenated = require('hyphenated');
+@@ -43,25 +45,34 @@ function _objectWithoutProperties(source, excluded) {
+ 
+ var Hyphenated = function Hyphenated(_ref) {
+   var children = _ref.children,
+-      language = _ref.language;
++    language = _ref.language;
+   var childrenCount = React.Children.count(children);
+ 
+   var hyphenateChild = function hyphenateChild(child) {
++    if (!React.isValidElement(child) && Array.isArray(child)) {
++      return React.Children.map(children, hyphenateChild);
++    }
+     if (child.type === Hyphenated) {
+       return child;
+     } else if (typeof child === 'string') {
+       return hyphenated.hyphenated(child, {
+-        language: language
++        language: language,
+       });
+     } else {
+       var _child$props = child.props,
+-          _children = _child$props.children,
+-          props = _objectWithoutProperties(_child$props, ["children"]);
+-
+-      return _children ? React.cloneElement(child, props, Hyphenated({
+-        children: _children,
+-        language: language
+-      })) : child;
++        _children = _child$props.children,
++        props = _objectWithoutProperties(_child$props, ['children']);
++
++      return _children
++        ? React.cloneElement(
++            child,
++            props,
++            Hyphenated({
++              children: _children,
++              language: language,
++            }),
++          )
++        : child;
+     }
+   };
+ 

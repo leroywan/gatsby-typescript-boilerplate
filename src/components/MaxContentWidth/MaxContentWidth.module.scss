@@ -1,0 +1,7 @@
+.MaxContentWidth {
+  @include max-screen-width;
+
+  &.fullHeight {
+    height: 100%;
+  }
+}

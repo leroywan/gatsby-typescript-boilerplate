@@ -1,0 +1,17 @@
+.Header {
+  height: $header-height;
+  display: flex;
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Navigation {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

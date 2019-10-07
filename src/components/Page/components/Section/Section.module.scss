@@ -1,0 +1,6 @@
+.Section {
+  position: relative;
+  margin-top: $spacing * 4;
+  margin-bottom: $spacing * 4;
+  transition: background-color $animation-duration ease-in;
+}

@@ -1,0 +1,46 @@
+$content-grid-gutter: ($max-screen-width - $max-content-width) / 2;
+
+.GridContainer {
+  width: 100%;
+}
+
+.Grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns:
+    $spacing minmax(0, 1fr) calc(100% - #{$spacing * 2}) minmax(0, 1fr)
+    $spacing;
+  min-width: 0;
+  min-height: 0;
+
+  @include medium {
+    grid-template-columns:
+      minmax($spacing, 1fr) minmax(0, 1fr) minmax(0, $max-content-width) minmax(
+        0,
+        1fr
+      )
+      minmax($spacing, 1fr);
+  }
+
+  @include large {
+    grid-template-columns: 1fr $content-grid-gutter $max-content-width $content-grid-gutter 1fr;
+  }
+
+  @include xlarge {
+    grid-template-columns:
+      1fr $content-grid-gutter minmax($max-content-width, 50vw)
+      $content-grid-gutter 1fr;
+  }
+}
+
+.Grid > * {
+  grid-column: 3;
+}
+
+.FullWidth {
+  grid-column: 1 / -1;
+}
+
+.ScreenWidth {
+  grid-column: 2 / -2;
+}

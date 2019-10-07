@@ -1,0 +1,93 @@
+$max-article-width: 640px;
+
+@mixin FullWidth {
+  grid-column: 1 / -1;
+}
+
+@mixin Wide {
+  grid-column: 1 / -1;
+
+  @include medium {
+    grid-column: 3 / -3;
+  }
+}
+
+.Article {
+  overflow-x: hidden;
+  display: grid;
+  width: 100%;
+  grid-template-columns:
+    $spacing minmax(0, 1fr) calc(100% - #{$spacing * 2}) minmax(0, 1fr)
+    $spacing;
+  min-width: 0;
+  min-height: 0;
+
+  figure {
+    margin: $spacing 0;
+
+    img {
+      vertical-align: middle;
+      margin: 0;
+    }
+  }
+
+  blockquote {
+    text-align: center;
+    p {
+      font-size: $font-size-h1;
+    }
+
+    cite {
+      font-size: $font-size-subscript;
+    }
+
+    @include Wide();
+    @include medium {
+      margin: $spacing * 2 0;
+    }
+  }
+
+  figcaption {
+    padding: $spacing-tight;
+    font-size: $font-size-subscript;
+    max-width: $max-article-width;
+    font-style: italic;
+    margin: 0 auto;
+  }
+
+  @include medium {
+    grid-template-columns:
+      $spacing minmax(0, 1fr) minmax(0, #{$spacing * 6})
+      $max-article-width minmax(0, #{$spacing * 6}) minmax(0, 1fr)
+      $spacing;
+  }
+}
+
+.Article > * {
+  grid-column: 3;
+
+  @include medium {
+    grid-column: 4;
+  }
+}
+
+.Article .ArticleTitle {
+  margin-bottom: $spacing;
+
+  h1 {
+    line-height: 1;
+    font-size: 4.3rem;
+  }
+}
+
+.FullWidth {
+  grid-column: 1 / -1;
+}
+
+.Wide {
+  grid-column: 1 / -1;
+
+  @include medium {
+    grid-column: 3 / -3;
+  }
+}

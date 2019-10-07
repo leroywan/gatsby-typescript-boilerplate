@@ -1,0 +1,144 @@
+.TextContainer {
+  display: block;
+  position: relative;
+
+  p {
+    margin-top: 0;
+    margin-bottom: $spacing-tight;
+  }
+
+  &.alignLeft {
+    text-align: left;
+  }
+
+  &.alignCenter {
+    text-align: center;
+  }
+
+  &.alignRight {
+    text-align: right;
+  }
+
+  &.alignJustify {
+    text-align: justify;
+  }
+}
+
+.Text {
+  display: block;
+  line-height: $line-height;
+  margin-top: 0;
+  margin-bottom: $spacing-tight;
+  font-size: $font-size;
+  transition: color $animation-duration ease-in-out;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.sizeH1 {
+    font-size: $font-size-h1;
+  }
+
+  &.sizeH2 {
+    font-size: $font-size-h2;
+  }
+
+  &.sizeH3 {
+    font-size: $font-size-h3;
+  }
+
+  &.sizeH4 {
+    font-size: $font-size-h4;
+  }
+
+  &.sizeH5 {
+    font-size: $font-size-h5;
+  }
+
+  &.sizeH6 {
+    font-size: $font-size-h6;
+  }
+
+  &.sizeSmall {
+    font-size: $font-size-small;
+  }
+
+  &.sizeSubscript {
+    font-size: $font-size-subscript;
+  }
+
+  &.alignLeft {
+    text-align: left;
+  }
+
+  &.alignCenter {
+    text-align: center;
+  }
+
+  &.alignRight {
+    text-align: right;
+  }
+
+  &.alignJustify {
+    text-align: justify;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.subdued {
+    color: $color-text-subdued;
+  }
+}
+
+h1.Heading {
+  font-size: $font-size-h1;
+}
+
+h2.Heading {
+  font-size: $font-size-h2;
+}
+
+h3.Heading {
+  font-size: $font-size-h3;
+}
+
+h4.Heading {
+  font-size: $font-size-h4;
+}
+
+h5.Heading {
+  font-size: $font-size-h5;
+}
+
+h6.Heading {
+  font-size: $font-size-h6;
+}
+
+.Heading {
+  display: block;
+  line-height: $line-height;
+  margin-bottom: $spacing-tight;
+  margin-top: $spacing-loose;
+  font-weight: $font-weight-bold;
+
+  &.uppercase {
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-bold;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:only-child {
+    margin: 0;
+  }
+}

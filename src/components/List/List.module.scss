@@ -1,0 +1,67 @@
+.List {
+  position: relative;
+  padding-left: $spacing-loose;
+  margin-top: $spacing;
+  margin-bottom: $spacing;
+  list-style: disc outside none;
+
+  @include small {
+    padding-left: $spacing * 2;
+  }
+
+  &.ordered {
+    list-style: decimal;
+
+    .List {
+      list-style: decimal;
+    }
+  }
+
+  &.noPadding {
+    padding: 0;
+  }
+
+  &.noBullets {
+    list-style: none;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &.unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.ListItem {
+  position: relative;
+  color: $color-text;
+  margin-bottom: $spacing-tight / 2;
+  line-height: $line-height;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .List:first-child {
+    margin-top: $spacing-tight / 2;
+  }
+
+  .unstyled & {
+    display: inline-block;
+  }
+}
+
+.ListItemBullet {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  padding-right: $spacing-tight / 2;
+}

@@ -1,0 +1,55 @@
+.Heading {
+  display: block;
+  margin-bottom: $spacing-tight;
+  line-height: $line-height;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &.Heading1 {
+    font-size: $font-size-h1;
+  }
+
+  &.Heading2 {
+    font-size: $font-size-h2;
+  }
+
+  &.Heading3 {
+    font-size: $font-size-h3;
+  }
+
+  &.Heading4 {
+    font-size: $font-size-h4;
+  }
+
+  &.Heading5 {
+    font-size: $font-size-h5;
+  }
+
+  &.Heading6 {
+    font-size: $font-size-h6;
+  }
+}
+
+.upperCase {
+  text-transform: uppercase;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+.center {
+  text-align: center;
+}
+
+.spaceUnderTight {
+  margin-bottom: $spacing-tight;
+}
+
+.spaceUnderLoose {
+  margin-bottom: $spacing-loose;
+}
+
+.spaceUnderExtraLoose {
+  margin-bottom: $spacing-extra-loose;
+}
