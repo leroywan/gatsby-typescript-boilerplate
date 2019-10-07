@@ -1,3 +1,3 @@
-# site
+# Gatsby-Typescript-Boilerplate
 
-This is a Gatsby boilerplate using Typescript and my component library
+This is a boilerplate using Typescript, Redux, and a set of helper components to quickly get you started with Gatsby.
