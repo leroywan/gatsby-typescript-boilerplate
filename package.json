@@ -1,12 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-typescript-boilerplate",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple Typescript starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "leroywan@gmail.com",
   "dependencies": {
     "@types/redux-logger": "^3.0.7",
-    "body-scroll-lock": "^2.6.4",
     "cuid": "^2.1.6",
     "gatsby": "^2.3.30",
     "gatsby-image": "^2.0.40",
@@ -20,7 +19,6 @@
     "gatsby-plugin-sharp": "^2.0.35",
     "gatsby-plugin-typescript": "^2.0.13",
     "gatsby-source-filesystem": "^2.0.32",
-    "gatsby-source-wordpress": "^3.0.61",
     "gatsby-transformer-sharp": "^2.1.18",
     "moment": "^2.24.0",
     "node-sass": "^4.11.0",
@@ -28,22 +26,13 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-flexbox-grid": "^2.1.2",
     "react-helmet": "^5.2.0",
-    "react-html-parser": "^2.0.2",
     "react-hyphen": "^1.3.0",
-    "react-icons": "^3.6.1",
-    "react-key-handler": "^1.2.0-beta.3",
     "react-lazy-load": "^3.0.13",
-    "react-markdown": "^4.0.8",
-    "react-parallax": "^2.2.0",
     "react-redux": "^7.0.3",
-    "react-spring": "^8.0.27",
-    "react-syntax-highlighter": "^10.2.1",
     "react-waypoint": "^9.0.2",
     "redux": "^4.0.1",
-    "redux-logger": "^3.0.6",
-    "striptags": "^3.1.1"
+    "redux-logger": "^3.0.6"
   },
   "keywords": [
     "gatsby"

@@ -1,5 +1,3 @@
-export {default as Article} from './Article';
-
 export {default as Decor} from './Decor';
 
 export {default as Grid} from './Grid';
